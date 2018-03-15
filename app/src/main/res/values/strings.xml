@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MedList</string>
+    <string name="med_name">Enter medicine details</string>
+    <string name="med_name_edit">Medicine name</string>
+    <string name="qty">Quantity</string>
+    <string name="title_activity_list">ListActivity</string>
+</resources>

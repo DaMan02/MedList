@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dayal.medlist.Activities.DetailsActivity">
+ <RelativeLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content">
+     <TextView
+         android:id="@+id/confirm_text"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Delete selected item ?"
+         android:textStyle="bold"
+         android:textSize="18dp"
+         android:padding="18dp"
+         />
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/no_btn"
+             android:text="No"
+             android:layout_below="@id/confirm_text"
+             android:layout_alignParentLeft="true"
+             android:textColor="@color/colorAccent"
+             android:background="#00fffffe"/>
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/yes_btn"
+             android:layout_alignParentRight="true"
+             android:layout_below="@id/confirm_text"
+             android:textColor="@color/colorAccent"
+             android:text="Yes"
+             android:background="#00fffffe"/>
+
+ </RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
