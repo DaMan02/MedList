@@ -39,8 +39,8 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setTitle("Medicine List");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         db=new DatabaseHandler(this);
@@ -68,8 +68,8 @@ public class ListActivity extends AppCompatActivity {
         for(Medicine m:medicineList){
             Medicine medicine=new Medicine();
             medicine.setName(m.getName());
-            Log.w("list","id " + medicine.getId());
-            Log.w("list","Name " + medicine.getName());
+//            Log.w("list","id " + medicine.getId());
+//            Log.w("list","Name " + medicine.getName());
             medicine.setQuantity("Qty: " + m.getQuantity());
             medicine.setId(m.getId());
             medicine.setDateAdded("Added on: " + m.getDateAdded());
@@ -110,7 +110,7 @@ public class ListActivity extends AppCompatActivity {
         newMed.setQuantity(medicineQty);
 
         db.addMed(newMed);
-        Log.i("item added",String.valueOf(db.getMedCount()));
+       // Log.i("item added",String.valueOf(db.getMedCount()));
         Snackbar.make(v,"Saved",Snackbar.LENGTH_SHORT).show();
         new Handler().postDelayed(new Runnable(){
             @Override

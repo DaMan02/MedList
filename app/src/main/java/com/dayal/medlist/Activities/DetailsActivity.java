@@ -3,10 +3,12 @@ package com.dayal.medlist.Activities;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.preference.DialogPreference;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,6 +32,12 @@ public class DetailsActivity extends AppCompatActivity {
         nameTxt=(TextView)findViewById(R.id.detail_name);
         qtyTxt=(TextView)findViewById(R.id.detail_qty);
         datetxt=(TextView)findViewById(R.id.detail_date);
+        editBtn = (Button)findViewById(R.id.edit_btn);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Details");
+
+        editBtn.setVisibility(View.INVISIBLE);
 
         Bundle bundle=getIntent().getExtras();
         if(bundle!=null){

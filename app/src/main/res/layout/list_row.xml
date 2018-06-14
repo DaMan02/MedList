@@ -27,16 +27,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/med_name"
-            android:textSize="18sp"
-            android:text="Qty"
+            android:textSize="15sp"
+            android:text=" "
             />
         <TextView
             android:id="@+id/date_added"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/med_qty"
+            android:visibility="gone"
             android:textSize="18sp"
-            android:text="Date : " />
+            android:text="Date : "
+            />
         <TableRow
             android:id="@+id/table_row"
             android:layout_alignParentEnd="true"

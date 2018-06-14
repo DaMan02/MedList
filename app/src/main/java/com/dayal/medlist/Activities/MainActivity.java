@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         newMed.setQuantity(medicineQty);
 
         db.addMed(newMed);
-        Log.i("item added",String.valueOf(db.getMedCount()));
+      //  Log.i("item added",String.valueOf(db.getMedCount()));
         Snackbar.make(v,"Saved",Snackbar.LENGTH_SHORT).show();
         new Handler().postDelayed(new Runnable(){
             @Override
